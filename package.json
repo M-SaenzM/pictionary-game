@@ -1,0 +1,20 @@
+{
+  "name": "pictionary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.6.1",
+    "xss": "^1.0.14"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

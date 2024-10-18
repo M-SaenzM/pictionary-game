@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictionary</title> 
+    <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"></script>
+    <link rel="stylesheet" defer href="./style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="app.js" defer></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="background-img"></div>
+        <div class="login" id="loginDiv">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>Pictionary</h1>
+            </div>
+            <br>
+            <form class="form-inline" id="frmLogin">
+                <div class="form-group mr-2">
+                    <input type="text" placeholder="Enter your name!" class="form-control" id="txtPlayer" />
+                </div>
+                 <button type="submit" id="submit" class="btn btn-outline-dark">OK</button>
+            </form>
+        </div>
+        <div class="hide waiting-room" id="waitingRoomDiv">
+            <h3>Waiting for the game to start...</h3>
+            <p>Users Connected:</p>
+            <div class="waitlist" id="waitlist" >
+                
+            </div>
+            <br>
+            <button type="submit" id="startGame" class="btn btn-outline-dark hide">Start Game</button>
+        </div>
+        <div id="gameboardDiv" class="gameboard hide">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>Pictionary</h1>
+            </div>
+            <div class="game-container">
+                <div class="left-section">
+                     <div class="game-info">
+                        <div id="drawer">Drawer: </div>
+                        <div id="wordToDraw">Word to draw:</div>
+                    </div>
+                    <div id="chatSection" class="chat-section">
+                       
+                    </div>
+                    <div>
+                        <form id="frmChat" class="form-inline">
+                            <div class="form-group ">
+                                <input type="text" placeholder="Make a guess" id="chatInput" class="form-control">
+                            </div>
+                            <button type="submit" id="sendChatBtn" class="btn btn-outline-dark">Guess</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="drawing-section" class="drawing-section">
+                    <canvas id="canvas"></canvas>
+                    <button id="clearButton" class="btn btn-info">Clear Canvas</button>
+                </div>
+                
+            </div>
+
+        </div>
+   
+    </div>
+   
+    
+   
+   
+</body>
+</html>
